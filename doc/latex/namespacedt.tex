@@ -1,0 +1,109 @@
+\hypertarget{namespacedt}{}\doxysection{dt Namespace Reference}
+\label{namespacedt}\index{dt@{dt}}
+
+
+пространство имен Detector Lib.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdt_1_1_named_cascade}{Named\+Cascade}}
+\item 
+class \mbox{\hyperlink{classdt_1_1_result}{Result}}
+\begin{DoxyCompactList}\small\item\em Класс, реализущий хранение результата детектирования \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classdt_1_1_template}{Template}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacedt_ac8cba70d6e93eaf6c2f8ae8ccc0ebe18}{config}} (const std\+::string \&main\+\_\+dir, const std\+::string \&config\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{structdt_1_1_named_cascade}{dt\+::\+Named\+Cascade}} $>$ \&output)
+\item 
+void \mbox{\hyperlink{namespacedt_aa360bb6351a0576897f81d14765ad0ba}{match}} (const cv\+::\+Mat \&img, std\+::vector$<$ \mbox{\hyperlink{structdt_1_1_named_cascade}{dt\+::\+Named\+Cascade}} $>$ \&cass, std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} $>$ \&output)
+\item 
+\mbox{\Hypertarget{namespacedt_ae585398bd0e809c061795db89a80fba9}\label{namespacedt_ae585398bd0e809c061795db89a80fba9}} 
+void \mbox{\hyperlink{namespacedt_ae585398bd0e809c061795db89a80fba9}{get\+\_\+\+Mat}} (std\+::string \&image\+\_\+path, cv\+::\+Mat \&output)
+\begin{DoxyCompactList}\small\item\em сервисная функция получения изображения по его системному пути \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacedt_ac8949b96926f87de1bfcc163b1245fbc}\label{namespacedt_ac8949b96926f87de1bfcc163b1245fbc}} 
+cv\+::\+Mat \mbox{\hyperlink{namespacedt_ac8949b96926f87de1bfcc163b1245fbc}{create}} (const cv\+::\+Mat \&img, const std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} $>$ \&res)
+\begin{DoxyCompactList}\small\item\em функция, позволяющая совместить результаты детектирования нескольких видов элементов на одном изображении \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{namespacedt_aea12c23e5003f001831bd54139de408b}\label{namespacedt_aea12c23e5003f001831bd54139de408b}} 
+void \mbox{\hyperlink{namespacedt_aea12c23e5003f001831bd54139de408b}{show}} (const cv\+::\+Mat \&image, std\+::string text, cv\+::\+Window\+Flags size)
+\begin{DoxyCompactList}\small\item\em функция показа итогового результата на экране \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespacedt_ac822deb1833b7c509b8ce982d27dba19}{config}} (const std\+::string \&main\+\_\+dir, const std\+::string \&config\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} $>$ \&output)
+\item 
+void \mbox{\hyperlink{namespacedt_a27fdca76a4e40f670977e649281cf3f4}{match}} (const cv\+::\+Mat \&img, const \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} \&temp, \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} \&output, int limit=100, double threshold=0.\+98)
+\item 
+\mbox{\Hypertarget{namespacedt_a01e857f5aab7798467452f306483d3af}\label{namespacedt_a01e857f5aab7798467452f306483d3af}} 
+void \mbox{\hyperlink{namespacedt_a01e857f5aab7798467452f306483d3af}{match}} (const cv\+::\+Mat \&img, const std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} $>$ \&input, std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} $>$ \&output, int limit=100, double threshold=0.\+98)
+\begin{DoxyCompactList}\small\item\em Реализует детектирование методом сопоставления шаблонов для нескольких элементов сразу \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+пространство имен Detector Lib. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacedt_ac8cba70d6e93eaf6c2f8ae8ccc0ebe18}\label{namespacedt_ac8cba70d6e93eaf6c2f8ae8ccc0ebe18}} 
+\index{dt@{dt}!config@{config}}
+\index{config@{config}!dt@{dt}}
+\doxysubsubsection{\texorpdfstring{config()}{config()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dt\+::config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{main\+\_\+dir,  }\item[{const std\+::string \&}]{config\+\_\+name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structdt_1_1_named_cascade}{dt\+::\+Named\+Cascade}} $>$ \&}]{output }\end{DoxyParamCaption})}
+
+Реализует парсинг конфигурационного файла обученных каскадов 
+\begin{DoxyParams}{Parameters}
+{\em main\+\_\+dir} & Директория, где находится конфигурационный файл \\
+\hline
+{\em config\+\_\+name} & Имя конфигурационного файла, в котором указаны имена каскадов и системные пути к ним \\
+\hline
+{\em output} & Выходной вектор объектов именованных каскадов \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacedt_ac822deb1833b7c509b8ce982d27dba19}\label{namespacedt_ac822deb1833b7c509b8ce982d27dba19}} 
+\index{dt@{dt}!config@{config}}
+\index{config@{config}!dt@{dt}}
+\doxysubsubsection{\texorpdfstring{config()}{config()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void dt\+::config (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{main\+\_\+dir,  }\item[{const std\+::string \&}]{config\+\_\+name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} $>$ \&}]{output }\end{DoxyParamCaption})}
+
+Реализует парсинг конфигурационного файла шаблонов 
+\begin{DoxyParams}{Parameters}
+{\em main\+\_\+dir} & Директория, где находится конфигурационный файл \\
+\hline
+{\em config\+\_\+name} & Имя конфигурационного файла, в котором указаны имена шаблонов и системные пути к ним \\
+\hline
+{\em output} & Выходной вектор объектов шаблонов \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacedt_a27fdca76a4e40f670977e649281cf3f4}\label{namespacedt_a27fdca76a4e40f670977e649281cf3f4}} 
+\index{dt@{dt}!match@{match}}
+\index{match@{match}!dt@{dt}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void dt\+::match (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{const \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} \&}]{temp,  }\item[{\mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} \&}]{output,  }\item[{int}]{limit = {\ttfamily 100},  }\item[{double}]{threshold = {\ttfamily 0.98} }\end{DoxyParamCaption})}
+
+Реализует детектирование методом сопоставления шаблонов для одного элемента 
+\begin{DoxyParams}{Parameters}
+{\em img} & Исходное изображение, на котором нужно детектировать элементы \\
+\hline
+{\em temp} & Объект шаблона, который нужно детектировать \\
+\hline
+{\em output} & Выходной объект результата детектирования \\
+\hline
+{\em limit} & Лимит количества возможных шаблонов на изображении, если найдено больше -\/ значит детектор ошибся и это выбросы. \\
+\hline
+{\em threshold} & Порог выраженности шаблона, рекомендуется 0.\+97-\/0.\+99 \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{namespacedt_aa360bb6351a0576897f81d14765ad0ba}\label{namespacedt_aa360bb6351a0576897f81d14765ad0ba}} 
+\index{dt@{dt}!match@{match}}
+\index{match@{match}!dt@{dt}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void dt\+::match (\begin{DoxyParamCaption}\item[{const cv\+::\+Mat \&}]{img,  }\item[{std\+::vector$<$ \mbox{\hyperlink{structdt_1_1_named_cascade}{dt\+::\+Named\+Cascade}} $>$ \&}]{cass,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} $>$ \&}]{output }\end{DoxyParamCaption})}
+
+Реализует детектирование с помощью сразу нескольких обученных каскадных классификаторов 
+\begin{DoxyParams}{Parameters}
+{\em img} & Исходное изображение, на котором нужно детектировать элементы \\
+\hline
+{\em cass} & Вектор объектов обученных именованных каскадов \\
+\hline
+{\em output} & Выходной вектор результатов для каждого каскада \\
+\hline
+\end{DoxyParams}

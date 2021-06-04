@@ -1,0 +1,10 @@
+AddPost templates/add_post.png
+Comm. templates/comment.png
+Home templates/home.png
+IGTV templates/igtv.png
+Like templates/like.png
+Profile templates/profile.png
+Save templates/save.png
+Search templates/search.png
+Share templates/share.png
+Story templates/story.png

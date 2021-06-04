@@ -1,0 +1,36 @@
+\hypertarget{template_8h}{}\doxysection{D\+:/\+Education/\+M\+I\+Si\+S/3\+\_\+semester/\+Programming/orzhekh\+\_\+e\+\_\+v/prj.cwork/detector/template.h File Reference}
+\label{template_8h}\index{D:/Education/MISiS/3\_semester/Programming/orzhekh\_e\_v/prj.cwork/detector/template.h@{D:/Education/MISiS/3\_semester/Programming/orzhekh\_e\_v/prj.cwork/detector/template.h}}
+{\ttfamily \#include \char`\"{}result.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacedt}{dt}}
+\begin{DoxyCompactList}\small\item\em пространство имен Detector Lib. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacedt_ac822deb1833b7c509b8ce982d27dba19}{dt\+::config}} (const std\+::string \&main\+\_\+dir, const std\+::string \&config\+\_\+name, std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} $>$ \&output)
+\item 
+void \mbox{\hyperlink{namespacedt_a27fdca76a4e40f670977e649281cf3f4}{dt\+::match}} (const cv\+::\+Mat \&img, const \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} \&temp, \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} \&output, int limit=100, double threshold=0.\+98)
+\item 
+\mbox{\Hypertarget{namespacedt_a01e857f5aab7798467452f306483d3af}\label{namespacedt_a01e857f5aab7798467452f306483d3af}} 
+void \mbox{\hyperlink{namespacedt_a01e857f5aab7798467452f306483d3af}{dt\+::match}} (const cv\+::\+Mat \&img, const std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_template}{dt\+::\+Template}} $>$ \&input, std\+::vector$<$ \mbox{\hyperlink{classdt_1_1_result}{dt\+::\+Result}} $>$ \&output, int limit=100, double threshold=0.\+98)
+\begin{DoxyCompactList}\small\item\em Реализует детектирование методом сопоставления шаблонов для нескольких элементов сразу \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Евгений Оржех 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2020 год
+\end{DoxyDate}
+Данный заголовочный файл содержит в себе определение классов и функций для реализации детектирования методом сопоставления шаблонов. (Template Mathing) 

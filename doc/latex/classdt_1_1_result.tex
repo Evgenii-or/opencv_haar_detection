@@ -1,0 +1,76 @@
+\hypertarget{classdt_1_1_result}{}\doxysection{dt\+::Result Class Reference}
+\label{classdt_1_1_result}\index{dt::Result@{dt::Result}}
+
+
+Класс, реализущий хранение результата детектирования  
+
+
+
+
+{\ttfamily \#include $<$result.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classdt_1_1_result_a18cd0dc41aa8bc56bd24c5603400737e}\label{classdt_1_1_result_a18cd0dc41aa8bc56bd24c5603400737e}} 
+\mbox{\hyperlink{classdt_1_1_result_a18cd0dc41aa8bc56bd24c5603400737e}{Result}} (const std\+::string \&\mbox{\hyperlink{classdt_1_1_result_ae85db6033e260cd935fa47aab33f5f81}{name}}, const cv\+::\+Rect \&\mbox{\hyperlink{classdt_1_1_result_ad1fa205536ddaa7853746d3aec5b5805}{image\+\_\+rect}})
+\begin{DoxyCompactList}\small\item\em Конструктор \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_afc0bfab41a4e37668503f7bc8a1f094f}\label{classdt_1_1_result_afc0bfab41a4e37668503f7bc8a1f094f}} 
+{\bfseries Result} (const \mbox{\hyperlink{classdt_1_1_result}{Result}} \&)=default
+\item 
+\mbox{\Hypertarget{classdt_1_1_result_a9dc0d94535429ff32b9d6b5710644e41}\label{classdt_1_1_result_a9dc0d94535429ff32b9d6b5710644e41}} 
+\mbox{\hyperlink{classdt_1_1_result}{Result}} \& {\bfseries operator=} (const \mbox{\hyperlink{classdt_1_1_result}{Result}} \&rhs)=default
+\item 
+\mbox{\Hypertarget{classdt_1_1_result_ae85db6033e260cd935fa47aab33f5f81}\label{classdt_1_1_result_ae85db6033e260cd935fa47aab33f5f81}} 
+std\+::string \mbox{\hyperlink{classdt_1_1_result_ae85db6033e260cd935fa47aab33f5f81}{name}} () const
+\begin{DoxyCompactList}\small\item\em Cвойство доступа к названию найденного элемента \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a777a6c1eacf13cf5de5cd57868ede4b5}\label{classdt_1_1_result_a777a6c1eacf13cf5de5cd57868ede4b5}} 
+void \mbox{\hyperlink{classdt_1_1_result_a777a6c1eacf13cf5de5cd57868ede4b5}{name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Cвойство добавления названия элемента \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_ad1fa205536ddaa7853746d3aec5b5805}\label{classdt_1_1_result_ad1fa205536ddaa7853746d3aec5b5805}} 
+cv\+::\+Rect \mbox{\hyperlink{classdt_1_1_result_ad1fa205536ddaa7853746d3aec5b5805}{image\+\_\+rect}} () const
+\begin{DoxyCompactList}\small\item\em Свойство доступа к размеру исходного изображения \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_afe3cd549912cc04303620973ec84dffb}\label{classdt_1_1_result_afe3cd549912cc04303620973ec84dffb}} 
+void \mbox{\hyperlink{classdt_1_1_result_afe3cd549912cc04303620973ec84dffb}{image\+\_\+rect}} (const cv\+::\+Rect \&rect)
+\begin{DoxyCompactList}\small\item\em Свойство добавления размера исходного изображения \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a35d9e489ffad7dd4fe2c060107e64a33}\label{classdt_1_1_result_a35d9e489ffad7dd4fe2c060107e64a33}} 
+bool \mbox{\hyperlink{classdt_1_1_result_a35d9e489ffad7dd4fe2c060107e64a33}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Проверка на наличие детектированных элементов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a58a716723419c3af0570dc0c87323f06}\label{classdt_1_1_result_a58a716723419c3af0570dc0c87323f06}} 
+size\+\_\+t \mbox{\hyperlink{classdt_1_1_result_a58a716723419c3af0570dc0c87323f06}{size}} () const
+\begin{DoxyCompactList}\small\item\em Количество детектированных элементов \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a2502caae8799a27f12c2f49de81d7056}\label{classdt_1_1_result_a2502caae8799a27f12c2f49de81d7056}} 
+cv\+::\+Rect \mbox{\hyperlink{classdt_1_1_result_a2502caae8799a27f12c2f49de81d7056}{get\+\_\+region}} (size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Cвойство доступа к областям по индексу \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a8537090877848159f080b27f1d5bafc4}\label{classdt_1_1_result_a8537090877848159f080b27f1d5bafc4}} 
+void \mbox{\hyperlink{classdt_1_1_result_a8537090877848159f080b27f1d5bafc4}{add\+\_\+region}} (const cv\+::\+Rect \&region)
+\begin{DoxyCompactList}\small\item\em Cвойство добавления новой области \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_ad7aae8a6d680cbd85136b30ee41504b8}\label{classdt_1_1_result_ad7aae8a6d680cbd85136b30ee41504b8}} 
+void \mbox{\hyperlink{classdt_1_1_result_ad7aae8a6d680cbd85136b30ee41504b8}{intersec\+\_\+koef}} (double k)
+\begin{DoxyCompactList}\small\item\em Коэффициент допустимого пересечения детектируемых областей \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a131ac93a724b22d57d32cd5f269cdc03}\label{classdt_1_1_result_a131ac93a724b22d57d32cd5f269cdc03}} 
+double \mbox{\hyperlink{classdt_1_1_result_a131ac93a724b22d57d32cd5f269cdc03}{intersec\+\_\+koef}} () const
+\begin{DoxyCompactList}\small\item\em Свойство получения коэф. пересечения \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a6d1ff155497a3d4e82ca45ee110e8f67}\label{classdt_1_1_result_a6d1ff155497a3d4e82ca45ee110e8f67}} 
+void \mbox{\hyperlink{classdt_1_1_result_a6d1ff155497a3d4e82ca45ee110e8f67}{inside\+\_\+koef}} (double k)
+\begin{DoxyCompactList}\small\item\em Коэффициент выхода за границы картинки для детектируемых областей \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a63b651538dbd986bbffc2fbe5a781c56}\label{classdt_1_1_result_a63b651538dbd986bbffc2fbe5a781c56}} 
+double \mbox{\hyperlink{classdt_1_1_result_a63b651538dbd986bbffc2fbe5a781c56}{inside\+\_\+koef}} () const
+\begin{DoxyCompactList}\small\item\em Свойство получения коэф. выхода за границы \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_aa4d76d20600d02ac57f41e36a29dae90}\label{classdt_1_1_result_aa4d76d20600d02ac57f41e36a29dae90}} 
+cv\+::\+Mat \mbox{\hyperlink{classdt_1_1_result_aa4d76d20600d02ac57f41e36a29dae90}{create}} (const cv\+::\+Mat \&img)
+\begin{DoxyCompactList}\small\item\em Изображение детектированных областей с метками классов на картинке \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classdt_1_1_result_a52b3b62f5abf046b6cf655db8e3bbd55}\label{classdt_1_1_result_a52b3b62f5abf046b6cf655db8e3bbd55}} 
+void \mbox{\hyperlink{classdt_1_1_result_a52b3b62f5abf046b6cf655db8e3bbd55}{set\+\_\+regions}} (const std\+::vector$<$ cv\+::\+Rect $>$ \&regions)
+\begin{DoxyCompactList}\small\item\em Добавление найденных областей \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс, реализущий хранение результата детектирования 
+
+Объект данного класса \mbox{\hyperlink{classdt_1_1_result}{Result}} предоставляет доступ к областям, где были детектированы элементы одного типа, их названию и размеру исходной картинки. А также методы визуализации результата. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Education/\+M\+I\+Si\+S/3\+\_\+semester/\+Programming/orzhekh\+\_\+e\+\_\+v/prj.\+cwork/detector/\mbox{\hyperlink{result_8h}{result.\+h}}\item 
+D\+:/\+Education/\+M\+I\+Si\+S/3\+\_\+semester/\+Programming/orzhekh\+\_\+e\+\_\+v/prj.\+cwork/detector/result.\+cpp\end{DoxyCompactItemize}
